@@ -17,8 +17,8 @@ https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin/assets/11488961/a1afcced-
 ![image](https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin/assets/11488961/ddaf52c5-d9ce-4f7f-acfc-2e2216a17b10)
 1. Enter the corresponding channels into Red, Green, Blue, White & Brightness silder.
 
-# Download
-[Windows x64](signalrgb://addon/install?url=https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin)
+# Install
+signalrgb://addon/install?url=https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin
 
 # Prerequisite
 - [SignalRGB](https://signalrgb.com/download/)
