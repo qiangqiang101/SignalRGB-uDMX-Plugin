@@ -1,7 +1,7 @@
 export function Name() { return "uDMX"; }
 export function VendorId() { return 0x16C0; }
 export function ProductId() { return 0x05DC; }
-export function Publisher() { return "www.anyma.ch"; }
+export function Publisher() { return "I'm Not MentaL"; }
 export function Size() { return [1,1]; }
 export function Type() { return "Rawusb"; }
 export function DefaultPosition(){return [1, 1]; }
@@ -16,8 +16,33 @@ export function ControllableParameters() {
 		{"property":"greenChannel", "group":"lighting", "label":"Green Channel", "min":"1", "max":"15", "type":"number", "default":"8"},
 		{"property":"blueChannel", "group":"lighting", "label":"Blue Channel", "min":"1", "max":"15", "type":"number", "default":"9"},
         {"property":"whiteChannel", "group":"lighting", "label":"White Channel", "min":"1", "max":"15", "type":"number", "default":"10"},
-        {"property":"whiteColor", "group":"lighting", "label":"White Color", "min":"0", "max":"255", "type":"number", "default":"255"},
+        {"property":"whiteColor", "group":"lighting", "label":"White Color", "min":"0", "max":"255", "type":"number", "default":"0"},
+		{"property":"rotationEnable", "group":"settings", "label":"Rotation", "type":"combobox", "values":["Off","Control Manually","React to Color"], "default":"Off"},
+		{"property":"rotationXChannel", "group":"settings", "label":"X Channel", "min":"1", "max":"15", "type":"number", "default":"1"},
+		{"property":"rotationYChannel", "group":"settings", "label":"Y Channel", "min":"1", "max":"15", "type":"number", "default":"3"},
+		{"property":"rotationXValue", "group":"settings", "label":"Manual X Value", "min":"0", "max":"255", "type":"number", "default":"0"},
+		{"property":"rotationYValue", "group":"settings", "label":"Manual Y Value", "min":"0", "max":"255", "type":"number", "default":"0"},
+		{"property":"rotationXReacts", "group":"settings", "label":"React X Color", "type":"combobox", "values":["Red","Green","Blue"], "default":"Red"},
+		{"property":"rotationYReacts", "group":"settings", "label":"React Y Color", "type":"combobox", "values":["Red","Green","Blue"], "default":"Green"},
 	];
+}
+
+var tick = 0;
+
+export function onrotationXValueChanged() {
+	if(rotationEnable == "Control Manually")
+	{
+		sendControlPacket(rotationXChannel, rotationXValue);
+		device.pause(1);
+	}
+}
+
+export function onrotationYValueChanged() {
+	if(rotationEnable == "Control Manually")
+	{
+		sendControlPacket(rotationYChannel, rotationYValue);
+		device.pause(1);
+	}
 }
 
 export function Initialize() {
@@ -52,8 +77,50 @@ export function Render() {
         sendControlPacket(greenChannel, color[1]);
         sendControlPacket(blueChannel, color[2]);
         sendControlPacket(brightnessChannel, brightness);
+		if(rotationEnable == "React to Color")
+		{
+			if(tick >= 30)
+			{
+				switch(rotationXReacts)
+				{
+					case "Red":
+						{
+							sendControlPacket(rotationXChannel, color[0]);
+							break;
+						}
+					case "Green":
+						{
+							sendControlPacket(rotationXChannel, color[1]);
+							break;
+						}
+					default:
+						sendControlPacket(rotationXChannel, color[2]);
+				}
+				switch(rotationYReacts)
+				{
+					case "Red":
+						{
+							sendControlPacket(rotationYChannel, color[0]);
+							break;
+						}
+					case "Green":
+						{
+							sendControlPacket(rotationYChannel, color[1]);
+							break;
+						}
+					default:
+						sendControlPacket(rotationYChannel, color[2]);
+				}
+				tick = 0;
+			}
+			else
+			{
+				tick++;
+			}
+		}
     }
     sendControlPacket(whiteChannel, whiteColor);
+	device.pause(1);
 }
 
 export function Shutdown() {
@@ -61,6 +128,8 @@ export function Shutdown() {
     sendControlPacket(redChannel, color[0]);
 	sendControlPacket(greenChannel, color[1]);
 	sendControlPacket(blueChannel, color[2]);
+	sendControlPacket(brightnessChannel, brightness);
+	sendControlPacket(whiteChannel, whiteColor);
 }
 
 function sendControlPacket(channel, value){
@@ -86,7 +155,5 @@ export function Validate(endpoint) {
 
 export function ImageUrl()
 {
-	//If merged back into main project
-	//return "https://raw.githubusercontent.com/qiangqiang101/SignalRGB-uDMX-Plugin/main/jc-light.png";
-	return "https://raw.githubusercontent.com/naitoshedo/SignalRGB-uDMX-Plugin/main/jc-light.png";
+	return "https://raw.githubusercontent.com/qiangqiang101/SignalRGB-uDMX-Plugin/main/jc-light.png";
 }
