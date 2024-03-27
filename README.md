@@ -12,6 +12,7 @@ https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin/assets/11488961/a1afcced-
 ![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCAZlasvEy1euunP1M7nwj5Q?style=social)
 [![Donate via PayPal](https://img.shields.io/badge/Donate-Paypal-brightgreen)](https://paypal.me/imnotmental)
 [![Follow on Patreon](https://img.shields.io/badge/Donate-Patreon-orange)](https://www.patreon.com/imnotmental)
+[![Click here to add this repo to SignalRGB](https://github.com/SRGBmods/qmk-plugins/blob/main/_images/add-to-signalrgb.png)](https://srgbmods.net/s?p=addon/install?url=https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin)
 
 # How to use
 ![image](https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin/assets/11488961/ddaf52c5-d9ce-4f7f-acfc-2e2216a17b10)
