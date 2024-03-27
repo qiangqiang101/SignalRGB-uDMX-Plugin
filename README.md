@@ -14,8 +14,9 @@ https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin/assets/11488961/a1afcced-
 [![Follow on Patreon](https://img.shields.io/badge/Donate-Patreon-orange)](https://www.patreon.com/imnotmental)
 
 # How to use
-![image](https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin/assets/11488961/ddaf52c5-d9ce-4f7f-acfc-2e2216a17b10)
-1. Enter the corresponding channels into Red, Green, Blue, White & Brightness silder.
+![image](https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin/assets/11488961/4dcaa557-19d6-4f67-b7da-6c60c1323c9f)
+1. Enter the corresponding channels into Red, Green, Blue, White & Brightness silder in Lighting Settings.
+2. Enter the corresponding channels into X, Y slider in Settings.
 
 # Install
 [![Click here to add this repo to SignalRGB](https://github.com/SRGBmods/qmk-plugins/blob/main/_images/add-to-signalrgb.png)](https://srgbmods.net/s?p=addon/install?url=https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin)
