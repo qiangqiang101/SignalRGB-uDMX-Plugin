@@ -61,7 +61,7 @@ export function LedPositions() {
 }
 
 export function Render() {
-    const brightness = device.getBrightness();
+    const brightness = device.getBrightness() * 2.55;
     if(LightingMode === "Forced")
     {
         let color = hexToRgb(forcedColor);
