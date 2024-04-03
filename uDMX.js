@@ -61,7 +61,7 @@ export function LedPositions() {
 }
 
 export function Render() {
-    const brightness = device.getBrightness() * 2.55;
+    let brightness = device.getBrightness() * 2.55;
     if(LightingMode === "Forced")
     {
         let color = hexToRgb(forcedColor);
@@ -125,6 +125,7 @@ export function Render() {
 
 export function Shutdown() {
     let color = hexToRgb(shutdownColor);
+	let brightness = device.getBrightness() * 2.55;
     sendControlPacket(redChannel, color[0]);
 	sendControlPacket(greenChannel, color[1]);
 	sendControlPacket(blueChannel, color[2]);
@@ -133,8 +134,8 @@ export function Shutdown() {
 }
 
 function sendControlPacket(channel, value){
-    const packet = [0];
-    const channel_offset = channel -1;
+    let packet = [0];
+    let channel_offset = channel -1;
 	//                  	type, req, val, index, data, length, timeout
 	device.control_transfer(0x40, 1, value, channel_offset, packet, value, 1000);
 }
