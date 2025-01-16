@@ -24,6 +24,7 @@ https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin/assets/11488961/a1afcced-
 # Prerequisite
 - [SignalRGB](https://signalrgb.com/download/)
 - [This USB to DMX](https://www.aliexpress.com/item/1005006257062027.html)
+- [Zadig](https://zadig.akeo.ie/downloads/) install the libusb driver
 
 # Special Thanks
 - [SignalRGB](https://signalrgb.com/download/)
