@@ -1,6 +1,6 @@
 # SignalRGB uDMX Plugin
 
-https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin/assets/11488961/a1afcced-c95c-4ad8-b809-f4aa03983a7d
+https://github.com/user-attachments/assets/c3625606-00b2-4fb0-9b30-3f4f2e333426
 
 ![Github All Releases](https://img.shields.io/github/downloads/qiangqiang101/SignalRGB-uDMX-Plugin/total.svg)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/qiangqiang101/SignalRGB-uDMX-Plugin)
