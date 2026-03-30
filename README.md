@@ -23,7 +23,7 @@ https://github.com/user-attachments/assets/c3625606-00b2-4fb0-9b30-3f4f2e333426
 
 # Prerequisite
 - [SignalRGB](https://signalrgb.com/download/)
-- [This USB to DMX](https://www.aliexpress.com/item/1005006257062027.html)
+- [This USB to DMX](https://www.aliexpress.com/item/440257960.html)
 - [Zadig](https://zadig.akeo.ie/downloads/) install the libusb driver
 
 # Special Thanks
