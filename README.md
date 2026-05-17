@@ -1,7 +1,7 @@
 # SignalRGB uDMX Plugin
 
 https://github.com/user-attachments/assets/c3625606-00b2-4fb0-9b30-3f4f2e333426
-
+https://github.com/qiangqiang101/SignalRGB-uDMX-Plugin/blob/main/README.md
 ![Github All Releases](https://img.shields.io/github/downloads/qiangqiang101/SignalRGB-uDMX-Plugin/total.svg)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/qiangqiang101/SignalRGB-uDMX-Plugin)
 ![GitHub](https://img.shields.io/github/license/qiangqiang101/SignalRGB-uDMX-Plugin)
@@ -23,7 +23,7 @@ https://github.com/user-attachments/assets/c3625606-00b2-4fb0-9b30-3f4f2e333426
 
 # Prerequisite
 - [SignalRGB](https://signalrgb.com/download/)
-- [This USB to DMX](https://www.aliexpress.com/item/440257960.html)
+- [Lixada USB to DMX](https://www.aliexpress.com/item/1005010589597981.html)
 - [Zadig](https://zadig.akeo.ie/downloads/) install the libusb driver
 
 # Special Thanks
